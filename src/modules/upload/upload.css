@@ -1,0 +1,7 @@
+.upload {
+	padding: 1.5rem 0;
+}
+
+.upload input[type=file] {
+	display: none;
+}
