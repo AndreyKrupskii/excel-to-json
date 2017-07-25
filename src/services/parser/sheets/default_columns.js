@@ -2,20 +2,22 @@ import Insert from './../helpers/insert';
 
 export default {
 	description: {
-		name: 'default',
-		sheetName: 'test',
-		parseWay: 'cells'
+		name: 'default rows',
+		sheetName: 'default columns',
+		parseWay: 'columns',
+		from: 1,
+		// to: 5
 	},
 	rules: {
-		A1: {
+		'A': {
 			jsonWay: 'root.my_key',
 			insert: Insert.insertString
 		},
-		A2: {
+		'B': {
 			jsonWay: 'root.my_key1',
 			insert: Insert.insertNumber
 		},
-		A3: {
+		'C': {
 			jsonWay: 'root.my_key2',
 			insert: (v) => Insert.insertString(v) === 'Так'
 		}

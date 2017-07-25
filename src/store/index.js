@@ -22,8 +22,8 @@ export function configStore() {
 	
 	// add hot module replacement
 	if (module.hot) {
-		module.hot.accept('./../reducers', () => {
-			store.replaceReducer(require('../ducks'))
+		module.hot.accept('./../ducks', () => {
+			store.replaceReducer(require('./../ducks'))
 		})
 	}
 	

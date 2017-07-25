@@ -11,4 +11,19 @@
 
 .history .panel {
 	cursor: pointer;
+	margin-bottom: 1rem;
+}
+
+.history .panel.opened {
+	background-color: #eee;
+}
+
+.history .panel:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+.history .history__files {
+	max-height: calc(100vh - 170px);
+	overflow-y: auto;
 }

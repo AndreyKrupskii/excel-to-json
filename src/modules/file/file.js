@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './file.css';
 
 /**
  * Component - file component
  */
-export default class File extends Component {
+class File extends Component {
 	/**
 	 * Method for rendering component layout
 	 * @return {XML}
@@ -12,40 +13,23 @@ export default class File extends Component {
 	render() {
 		return (
 			<div className="file">
-				
 				<pre>
-{`{
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
-{
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}`}
+					{this.props.file && this.props.file.json}
 				</pre>
 			</div>
 		)
 	}
 }
+
+/**
+ * Decorator - map state to props
+ * @param {object} state - app store state
+ * @return {object}
+ */
+function mapStateToProps(state) {
+	return {
+		file: state.file
+	};
+}
+
+export default connect(mapStateToProps)(File);

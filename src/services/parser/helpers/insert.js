@@ -17,9 +17,9 @@ export default class Insert {
 		
 		const value = parseFloat(input);
 		
-		if(isNaN(value)) {
-			return input;
-		}
+		// if(isNaN(value)) {
+		// 	return 0;
+		// }
 		
 		return value;
 	}
