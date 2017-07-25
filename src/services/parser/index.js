@@ -106,12 +106,12 @@ export default class Parser {
 	}
 	
 	/**
-	 * Method for parsing workbook rows
+	 * Method for parsing workbook columns
 	 * @param {object} sheet - workbook sheet
 	 * @param {object} schema - sheet schema
 	 * @return {Array}
 	 */
-	parseViaRows(sheet, schema) {
+	parseViaColumns(sheet, schema) {
 		// define parse limits
 		let from = schema.description.from || 'A';
 		let to = schema.description.to;
@@ -169,12 +169,12 @@ export default class Parser {
 	}
 	
 	/**
-	 * Method for parsing workbook columns
+	 * Method for parsing workbook rows
 	 * @param {object} sheet - workbook sheet
 	 * @param {object} schema - sheet schema
 	 * @return {Array}
 	 */
-	parseViaColumns(sheet, schema) {
+	parseViaRows(sheet, schema) {
 		// define parse limits
 		let from = schema.description.from || 0;
 		let to = schema.description.to;

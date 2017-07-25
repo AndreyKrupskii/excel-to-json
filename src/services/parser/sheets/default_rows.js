@@ -5,19 +5,19 @@ export default {
 		name: 'default rows',
 		sheetName: 'default rows',
 		parseWay: 'rows',
-		from: 'A',
-		// to: 'J'
+		from: 1,
+		// to: 5
 	},
 	rules: {
-		1: {
+		'A': {
 			jsonWay: 'root.my_key',
 			insert: Insert.insertString
 		},
-		2: {
+		'B': {
 			jsonWay: 'root.my_key1',
 			insert: Insert.insertNumber
 		},
-		3: {
+		'C': {
 			jsonWay: 'root.my_key2',
 			insert: (v) => Insert.insertString(v) === 'Так'
 		}

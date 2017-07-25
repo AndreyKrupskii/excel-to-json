@@ -16,7 +16,7 @@ export default {
 			insert: Insert.insertNumber
 		},
 		A3: {
-			jsonWay: 'root.my_key2',
+			jsonWay: 'root.my_key2.lol.lol',
 			insert: (v) => Insert.insertString(v) === 'Так'
 		}
 	}
